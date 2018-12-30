@@ -1,58 +1,58 @@
-# Developer console
+# Konsola deweloperska
 
-Code is prone to errors. You will quite likely make errors... Oh, what am I talking about? You are *absolutely* going to make errors, at least if you're a human, not a [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
+Kod jest podatny na błędy. Bardzo prawdopodobnie będziesz je robić... Oh, o czym ja mówię? Będziesz *absolutnie na pewno* robić błędy, przynajmniej jeśli jesteś człowiekiem, a nie [robotem](https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
-But in the browser, users doesn't see errors by default. So, if something goes wrong in the script, we won't see what's broken and can't fix it.
+W przeglądarce, użytkownicy domyślnie nie widzą błędów. Więc, jeśli coś pójdzie źle w skrypcie, nie zobaczymy co jest zepsute i nie możemy tego naprawić.
 
-To see errors and get a lot of other useful information about scripts, "developer tools" have been embedded in browsers.
+Aby umożliwić przeglądanie errorów i zdobywanie wielu przydatnych informacji o skryptach, w przeglądarki wbudowano "narzędzia programistyczne" (ang. dev tools).
 
-Most developers lean towards Chrome or Firefox for development because those browsers have the best developer tools. Other browsers also provide developer tools, sometimes with special features, but are usually playing "catch-up" to Chrome or Firefox. So most developers have a "favorite" browser and switch to others if a problem is browser-specific.
+Większość programistów składnia się, aby użyć Chrome'a lub Firefox'a do programowania, ponieważ te przeglądarki mają najlepsze narzędzia dla programistów. Inne przeglądarki również dostarczają narzędzia programistyczne, czasami ze specjalnymi funkcjami, ale zwykle ciągle gonią Chrome i Firefox'a. Dlatego, wielu programistów ma "ulubioną" przeglądarkę i zmienia ją jeśli problem jest specyficzny dla określonej przeglądarki.
 
-Developer tools are potent; they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+Narzędzia dla programistów są potężne; mają wiele funkcji. Zacznijmy, ucząc się jak je otworzyć, patrzeć na błędy i uruchamiać komendy JavaScriptu.
 
 ## Google Chrome
 
-Open the page [bug.html](bug.html).
+Otwórz stronę [bug.html](bug.html).
 
-There's an error in the JavaScript code on it. It's hidden from a regular visitor's eyes, so let's open developer tools to see it.
+Jest tam error w kodzie JavaScriptu. Jest ukryty przed zwykłymi odwiedzającymi, więc otwórzmy narzędzia programistyczne aby go zobaczyć.
 
-Press `key:F12` or, if you're on Mac, then `key:Cmd+Opt+J`.
+Naciśnij `key:F12` lub, jeśli używasz Mac'a - `key:Cmd+Opt+J`.
 
-The developer tools will open on the Console tab by default.
+Narzędzia programistyczne otworzą się domyślnie w zakładce Console.
 
-It looks somewhat like this:
+Wyglądają mniej więcej tak:
 
 ![chrome](chrome.png)
 
-The exact look of developer tools depends on your version of Chrome. It changes from time to time but should be similar.
+Dokładny wygląd narzędzi zależy od twojej wersji Chrome. Zmienia się od czasu do czasu, ale powinien być podobny.
 
-- Here we can see the red-colored error message. In this case, the script contains an unknown "lalala" command.
-- On the right, there is a clickable link to the source `bug.html:12` with the line number where the error has occurred.
+- Możemy tutaj zobaczyć wiadomość o błędzie koloru czerwonego. W tym przypadku skrypt zawiera nieznaną komendę "lalala".
+- Po prawej jest klikalny link do źródła `bug.html:12` z linią, gdzie wystąpił błąd.
 
-Below the error message, there is a blue `>` symbol. It marks a "command line" where we can type JavaScript commands. Press `key:Enter` to run them (`key:Shift+Enter` to input multi-line commands).
+Poniżej wiadomości błędu znajduje się niebieski symbol `>`. Oznacza "linię komend", gdzie możemy wpisywać komendy JavaScriptu. Wciśnij `key:Enter`, żeby je uruchomić (użyj`key:Shift+Enter` aby wpisać wieloliniowe komendy).
 
-Now we can see errors, and that's enough for a start. We'll come back to developer tools later and cover debugging more in-depth in the chapter <info:debugging-chrome>.
+Teraz możemy zobaczyć błędy i to wystarczy na start. Wrócimy do narzędzi programistycznych później i nauczymy się bardziej zaawansowanego debugowania w rozdziale <info:debugging-chrome>.
 
+## Firefox, Edge i inne
 
-## Firefox, Edge, and others
+Większość innych przeglądarek używa `key:F12` jako skrótu do otwierania narzędzi programistycznych.
 
-Most other browsers use `key:F12` to open developer tools.
-
-The look & feel of them is quite similar. Once you know how to use one of these tools (you can start with Chrome), you can easily switch to another.
+Wygląd i ich odczucia są całkiem podobne. Kiedy raz nauczysz się jak używać jednego z tych narzędzi (możesz zacząć z Chromem), możesz łatwo przesiąść się na inne.
 
 ## Safari
 
-Safari (Mac browser, not supported by Windows/Linux) is a little bit special here. We need to enable the "Develop menu" first.
+Safari (przeglądarka na MacOS, nie wspierana przez Windowsa/Linuxa) jest trochę specjalna w tym wypadku. Najpierw musimy włączyć "menu programistyczne".
 
-Open Preferences and go to the "Advanced" pane. There's a checkbox at the bottom:
+Otwórz Preferencje i przejdź do panelu "Zaawansowane". Jest tam opcja do zaznaczenia na dole:
 
 ![safari](safari.png)
 
-Now `key:Cmd+Opt+C` can toggle the console. Also, note that the new top menu item named "Develop" has appeared. It has many commands and options.
+Od teraz `key:Cmd+Opt+C` może włączyć konsolę. Również, zauważ, że pojawiło się nowe menu nazwane "Develop". Ma ono wiele komend i opcji.
 
-## Summary
+## Podsumowanie
 
-- Developer tools allow us to see errors, run commands, examine variables, and much more.
-- They can be opened with `key:F12` for most browsers on Windows. Chrome for Mac needs `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (need to enable first).
+- Narzędzia programistyczne pozwalają nam zobaczyć błędy, wykonywać komendy, analizować zmienne i wiele więcej.
+- Mogą one być otwarte wciskając `key:F12` dla większości przeglądarek na Windowsie. W Chromie na Macu trzeba użyć kombinacji `key:Cmd+Opt+J`, a w Safari `key:Cmd+Opt+C` (muszą być uprzednio włączone).
 
-Now we have the environment ready. In the next section, we'll get down to JavaScript.
+Teraz mamy gotowe środowisko. W następnej sekcji przejdziemy do JavaScriptu.
+
