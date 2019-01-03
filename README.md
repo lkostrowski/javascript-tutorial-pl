@@ -1,7 +1,7 @@
 # The JavaScript Tutorial
 This repository hosts the content of the Modern JavaScript Tutorial, published at https://javascript.info. Tutorial has been translated to Polish language by krzmaciek.
 ## Progress
-**1-js** 					<img src="http://progressed.io/bar/4">
+**1-js** 					<img src="http://progressed.io/bar/7">
 
 **2-ui** 					<img src="http://progressed.io/bar/0">
 
