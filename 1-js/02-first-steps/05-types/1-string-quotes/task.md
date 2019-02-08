@@ -1,10 +1,10 @@
-importance: 5
+ważność: 5
 
 ---
 
-# String quotes
+# Ciągi znaków
 
-What is the output of the script?
+Jaki jest wynik uruchomienia skryptu?
 
 ```js
 let name = "Ilya";
