@@ -1,49 +1,49 @@
-# Browser environment, specs
+# Środowisko przeglądarki, specyfikacja
 
-The JavaScript language was initially created for web browsers. Since then, it has evolved and become a language with many uses and platforms.
+Język JavaScript został stworzony z myślą o przeglądarka internetowych. Od otego czasu ewoluował i stał się jezykiem z wieloma zastosowaniami, na wiele platform.
 
-A platform may be a browser, or a web-server, or a washing machine, or another *host*. Each of them provides platform-specific functionality. The JavaScript specification calls that a *host environment*.
+Środowiskiem może być przeglądarka, serwer web, pralka lub inny *host*. Każdy z nich posiada specyficzne funkcjonalności. Specyfikacja JavaScript nazywa to *host environment* (środowisko uruchomieniowe).
 
-A host environment provides platform-specific objects and functions additional to the language core. Web browsers give a means to control web pages. Node.JS provides server-side features, and so on.
+Środowisko uruchomieniowe dostarcza specyficzne dla platformy obiekty i funkcje oprócz corowych funkcji języka. Przeglądarka kontroluje strony internetowe. Node.js dostarcza możliwości serwerowe i tak dalej.
 
-Here's a bird's-eye view of what we have when JavaScript runs in a web-browser:
+Oto z grubsza pogląd na JavaScript w przeglądarce:
 
 ![](windowObjects.png)
 
-There's a "root" object called `window`. It has two roles:
+Jest obecny "najwyższy" (root) obiekt zwany `window`. Ma on dwie role:
 
-1. First, it is a global object for JavaScript code, as described in the chapter <info:global-object>.
-2. Second, it represents the "browser window" and provides methods to control it.
+1: Po pierwsze, jest globalnym obiektem dla JavaScript, opsiany w rozdziale <info:global-object>.
+2: Po drugie, reprezenduje "okno przeglądarki" i dostarcza metody do kontroli nad nim.
 
-For instance, here we use it as a global object:
+Przykładowo tutaj używamy go jako globalnego obiektu:
 
 ```js run
 function sayHi() {
   alert("Hello");
 }
 
-// global functions are accessible as properties of window
+// globalne funkcje zostają przypisane do obiektu window
 window.sayHi();
 ```
 
-And here we use it as a browser window, to see the window height:
+A tutaj używamy go jako okna przeglądarki, by zobaczyć jej wysokość:
 
 ```js run
-alert(window.innerHeight); // inner window height
+alert(window.innerHeight); // wysokość wnętrza okna
 ```
 
-There are more window-specific methods and properties, we'll cover them later.
+Jest wiele metod i atrybutów obiektu window, omówimy je później.
 
 ## Document Object Model (DOM)
 
-The `document` object gives access to the page content. We can change or create anything on the page using it.
+Obiekt `document` daje dostęp do treści strony. Możemy zmienić lub stworzyć wszystko w obrębie strony.
 
-For instance:
+Przykładowo:
 ```js run
-// change the background color to red
+// zmień tło strony na czerwony
 document.body.style.background = "red";
 
-// change it back after 1 second
+// zmienń je z powrotem po 1 sekundzie
 setTimeout(() => document.body.style.background = "", 1000);
 ```
 
